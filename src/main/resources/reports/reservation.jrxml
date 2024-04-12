@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reservation" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9a1dbbb2-a030-4b3f-95aa-445b684168cc">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapterProjectRide.jrdax"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM reservation_detail;]]>
+	</queryString>
+	<field name="reservationId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="reservationId"/>
+		<property name="com.jaspersoft.studio.field.label" value="reservationId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation_detail"/>
+	</field>
+	<field name="trainId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="trainId"/>
+		<property name="com.jaspersoft.studio.field.label" value="trainId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation_detail"/>
+	</field>
+	<field name="noOfSeats" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="noOfSeats"/>
+		<property name="com.jaspersoft.studio.field.label" value="noOfSeats"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation_detail"/>
+	</field>
+	<field name="price" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="price"/>
+		<property name="com.jaspersoft.studio.field.label" value="price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reservation_detail"/>
+	</field>
+	<group name="reservationId">
+		<groupExpression><![CDATA[$F{reservationId}]]></groupExpression>
+	</group>
+	<group name="trainId">
+		<groupExpression><![CDATA[$F{trainId}]]></groupExpression>
+	</group>
+	<group name="noOfSeats">
+		<groupExpression><![CDATA[$F{noOfSeats}]]></groupExpression>
+	</group>
+	<group name="price">
+		<groupExpression><![CDATA[$F{price}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="140" y="10" width="270" height="50" uuid="27f1c8d2-4832-4162-ae41-a8302d28b52d"/>
+				<textElement>
+					<font size="19"/>
+				</textElement>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="7275311f-993c-4757-8417-89a890979506">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8d1a8df7-1847-499c-806b-2968e53c66fa"/>
+				</reportElement>
+				<text><![CDATA[reservationId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="0" width="100" height="30" uuid="f74a9c5f-badd-4b7a-a117-f9a0cb1f41c0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="716bd140-54c4-4584-9a03-bfd2f38c8a58"/>
+				</reportElement>
+				<text><![CDATA[trainId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="0" width="100" height="30" uuid="18b82c05-bf63-4210-98c1-0a426bb0105f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="74cecbdf-dc86-4f39-b49e-3d18115a625b"/>
+				</reportElement>
+				<text><![CDATA[noOfSeats]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="100" height="30" uuid="8fd55819-f4fc-4ea6-9e64-d37525ed2a14">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6a940668-6185-4974-8206-ae2b6a8d7b9b"/>
+				</reportElement>
+				<text><![CDATA[price]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="100" height="30" uuid="e23b3d48-5ce6-42d5-80bc-8c8003168760">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8d1a8df7-1847-499c-806b-2968e53c66fa"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{reservationId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="10" width="100" height="30" uuid="a2ff8168-bf95-4dc4-88ec-bb4a460bf0e3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="716bd140-54c4-4584-9a03-bfd2f38c8a58"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{trainId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="10" width="100" height="30" uuid="77faf4a6-68ca-468b-9357-ae6fdefbeede">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="74cecbdf-dc86-4f39-b49e-3d18115a625b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{noOfSeats}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="10" width="100" height="30" uuid="50779264-fc83-4b62-92a3-76a65a3368e6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6a940668-6185-4974-8206-ae2b6a8d7b9b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

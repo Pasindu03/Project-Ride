@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="1080.0" prefWidth="1620.0" style="-fx-background-color: #84bbe1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.TrainFormController">
+
+    <children>
+        <ImageView fitHeight="61.0" fitWidth="59.0" layoutX="64.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../icon/icons8-back-button.gif" />
+            </image>
+        </ImageView>
+
+        <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="42.0" layoutY="28.0" onAction="#btnOnActionBack" prefHeight="99.0" prefWidth="103.0" text="Back" />
+      <JFXTextField fx:id="txtID" layoutX="568.0" layoutY="166.0" onAction="#btnLoadOnAction" prefHeight="53.0" prefWidth="228.0" promptText="Train ID" stylesheets="@../styles/dashboard.css">
+         <font>
+            <Font name="Cambria" size="21.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtNoOfSeats" layoutX="568.0" layoutY="266.0" prefHeight="49.0" prefWidth="228.0" promptText="Number Of Seats" stylesheets="@../styles/dashboard.css">
+         <font>
+            <Font name="Cambria" size="21.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtType" layoutX="981.0" layoutY="162.0" prefHeight="49.0" prefWidth="228.0" promptText="Type" stylesheets="@../styles/dashboard.css">
+         <font>
+            <Font name="Cambria" size="21.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtStatus" layoutX="981.0" layoutY="262.0" prefHeight="49.0" prefWidth="228.0" promptText="Availability" stylesheets="@../styles/dashboard.css">
+         <font>
+            <Font name="Cambria" size="21.0" />
+         </font></JFXTextField>
+        <JFXTextField fx:id="txtPrice" layoutX="568.0" layoutY="366.0" prefHeight="49.0" prefWidth="228.0" promptText="Price Per Ticket" stylesheets="@../styles/dashboard.css">
+         <font>
+            <Font name="Cambria" size="21.0" />
+         </font></JFXTextField>
+
+        <TableView fx:id="tblTrains" layoutX="173.0" layoutY="540.0" prefHeight="434.0" prefWidth="1332.0">
+        <columns>
+          <TableColumn fx:id="colTrainID" prefWidth="208.0" text="Train ID" />
+          <TableColumn fx:id="colType" prefWidth="237.0" text="Type" />
+            <TableColumn fx:id="colNoOfSeats" prefWidth="310.0" text="Number Of Seats" />
+            <TableColumn fx:id="colStatus" prefWidth="274.0" text="Status of Avaliability" />
+            <TableColumn fx:id="colPrice" prefWidth="302.0" text="Price Per Ticket" />
+        </columns>
+      </TableView>
+
+        <Label layoutX="741.0" layoutY="31.0" prefHeight="42.0" prefWidth="219.0" text="Train Form" textFill="#5e5c5c">
+            <font>
+                <Font name="System Bold" size="26.0" />
+            </font>
+        </Label>
+
+      <ImageView fitHeight="311.0" fitWidth="324.0" layoutX="173.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icons8-railcar-96.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1038.0" layoutY="1002.0" prefHeight="49.0" prefWidth="382.0" text="Number Of Trains in the System : ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="countTrain" layoutX="1428.0" layoutY="1009.0" prefHeight="35.0" prefWidth="71.0" text="22">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <JFXButton buttonType="RAISED" layoutX="1357.0" layoutY="161.0" onAction="#btnAddOnAction" prefHeight="53.0" prefWidth="126.0" stylesheets="@../styles/dashboard.css" text="Add" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/new.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1357.0" layoutY="246.0" onAction="#btnUpdateOnAction" prefHeight="53.0" prefWidth="126.0" stylesheets="@../styles/dashboard.css" text=" Update" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/update.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1357.0" layoutY="331.0" onAction="#btnClearOnAction" prefHeight="53.0" prefWidth="126.0" stylesheets="@../styles/dashboard.css" text="Clear" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/clear.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1357.0" layoutY="416.0" onAction="#btnDeleteOnAction" prefHeight="53.0" prefWidth="126.0" stylesheets="@../styles/dashboard.css" text="Delete" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+    </children>
+
+</AnchorPane>

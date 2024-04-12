@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="1080.0" prefWidth="1620.0" style="-fx-background-color: #84bbe1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DeliveryFormController">
+
+    <children>
+        <Label layoutX="336.0" layoutY="140.0" text="Delivery ID :">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblDeliveryID" layoutX="469.0" layoutY="140.0" prefHeight="26.0" prefWidth="98.0" textFill="#278d7f">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font>
+        </Label>
+        <Label layoutX="764.0" layoutY="31.0" prefHeight="42.0" prefWidth="174.0" text="Delivery Form" textFill="#5e5c5c">
+            <font>
+                <Font name="System Bold" size="26.0" />
+            </font>
+        </Label>
+        <Label layoutX="336.0" layoutY="214.0" text="Delivery Holder ID : ">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <JFXComboBox fx:id="cmbPassengerId" layoutX="487.0" layoutY="207.0" onAction="#passengerOnAction" prefHeight="33.0" prefWidth="183.0" />
+        <JFXButton buttonType="RAISED" layoutX="704.0" layoutY="211.0" onAction="#btnNewPassengerOnAction" prefHeight="21.0" prefWidth="74.0" style="-fx-background-color: #2ecc71;" text="NEW" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <Label layoutX="938.0" layoutY="138.0" text="Delivery Date :">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="335.0" layoutY="339.0" text="Train ID : ">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <JFXComboBox fx:id="cmbTrainId" layoutX="487.0" layoutY="333.0" onAction="#TrainOnAction" prefHeight="33.0" prefWidth="183.0" />
+        <Label layoutX="916.0" layoutY="339.0" prefHeight="21.0" prefWidth="66.0" text="Weight :">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="336.0" layoutY="441.0" text="Price Per Weight :">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtWeight" layoutX="1001.0" layoutY="333.0" onAction="#txtWeightOnAction" prefHeight="33.0" prefWidth="87.0" />
+        <TableView fx:id="tblOrderCart" layoutX="280.0" layoutY="522.0" prefHeight="392.0" prefWidth="1069.0">
+            <columns>
+                <TableColumn fx:id="colTrainId" prefWidth="228.0" text="Train ID" />
+                <TableColumn fx:id="colWeight" prefWidth="199.0" text="Weight" />
+                <TableColumn fx:id="colUnitPrice" prefWidth="194.0" text="Price Per Weight" />
+                <TableColumn fx:id="colTotal" minWidth="0.0" prefWidth="224.0" text="Total" />
+                <TableColumn fx:id="colAction" prefWidth="223.0" text="Action" />
+            </columns>
+        </TableView>
+        <JFXButton fx:id="btnAddToCart" buttonType="RAISED" layoutX="1147.0" layoutY="474.0" onAction="#btnAddToCartOnAction" prefHeight="33.0" prefWidth="148.0" stylesheets="@../styles/dashboard.css" text="Place An Delivery" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="1345.0" layoutY="942.0" onAction="#btnPlaceOrderOnAction" prefHeight="78.0" prefWidth="203.0" stylesheets="@../styles/dashboard.css" text="Finish Delivery" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <Label layoutX="690.0" layoutY="972.0" text="Total Of Parcels To be Delivered :">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblNetTotal" layoutX="937.0" layoutY="966.0" prefHeight="32.0" prefWidth="129.0" text="Rs. 1440.00" textFill="#b51313">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblDate" layoutX="1061.0" layoutY="138.0" prefHeight="26.0" prefWidth="148.0" textFill="#278d7f">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font>
+        </Label>
+        <Label layoutX="938.0" layoutY="211.0" text="Delivery Holder's Name : ">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="passengerName" layoutX="1135.0" layoutY="209.0" prefHeight="26.0" prefWidth="148.0" textFill="#278d7f">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font>
+        </Label>
+      <Label layoutX="1095.0" layoutY="339.0" prefHeight="21.0" prefWidth="31.0" text="Kgs">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Line endX="856.0" layoutX="436.0" layoutY="298.0" startX="-99.0">
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis>
+      </Line>
+      <JFXButton buttonType="RAISED" layoutX="704.0" layoutY="337.0" onAction="#btnCheckSchedule" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #2ecc71;" text="Schedule" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label alignment="TOP_LEFT" layoutX="487.0" layoutY="439.0" prefHeight="26.0" prefWidth="428.0" text="|     &lt; 1 Kg    |   1Kg &lt; 4 Kg  |   4 Kg &lt; 10 Kg   |    10Kg &gt;    |  ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_LEFT" layoutX="487.0" layoutY="467.0" prefHeight="26.0" prefWidth="413.0" text="| Rs. 100.00  |    Rs. 200.00   |     Rs. 300.00     |  Rs. 400.00 | ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+        <JFXButton buttonType="RAISED" layoutX="1171.0" layoutY="946.0" onAction="#btnPrintBillOnAction" prefHeight="74.0" prefWidth="156.0" stylesheets="@../styles/dashboard.css" text="Print Bill" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+      <Line endX="306.0" layoutX="587.0" layoutY="433.0" startX="-99.0" />
+      <Line endX="304.0" endY="3.0" layoutX="587.0" layoutY="462.0" startX="-99.0" />
+      <Line endX="305.0" layoutX="587.0" layoutY="497.0" startX="-99.0" />
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="27.0" layoutY="23.0" onAction="#btnBackOnAction" prefHeight="82.0" prefWidth="72.0" text="Back">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icons8-back-button.gif" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+    </children>
+</AnchorPane>

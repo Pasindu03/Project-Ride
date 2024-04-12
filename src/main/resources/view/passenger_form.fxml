@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="1080.0" prefWidth="1620.0" style="-fx-background-color: #84bbe1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.PassengerFormController">
+   <children>
+      <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" onAction="#btnOnActionBack" prefHeight="99.0" prefWidth="103.0" text="Back">
+         <graphic>
+            <ImageView fitHeight="61.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icons8-back-button.gif" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <TableView fx:id="tblPassenger" layoutY="524.0" prefHeight="558.0" prefWidth="1620.0" style="-fx-background-color: #84bbe1;">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="242.99993896484375" text="Passenger ID" />
+          <TableColumn fx:id="colName" minWidth="0.0" prefWidth="300.0" text="Name" />
+            <TableColumn fx:id="colAge" prefWidth="180.0" text="Age" />
+            <TableColumn fx:id="colGender" prefWidth="170.0" text="Gender" />
+            <TableColumn fx:id="colAddress" prefWidth="450.0" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="276.0" text="Contact" />
+        </columns>
+      </TableView>
+      <Label layoutX="701.0" layoutY="28.0" prefHeight="42.0" prefWidth="219.0" text="Passenger Form" textFill="#5e5c5c">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="741.0" layoutY="104.0" onAction="#btnOnActionAdd" prefHeight="170.0" prefWidth="245.0" stylesheets="@../styles/form.css" text="Add" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/new.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="997.0" layoutY="104.0" onAction="#btnOnActionUpdate" prefHeight="170.0" prefWidth="245.0" stylesheets="@../styles/form.css" text=" Update" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/update.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="864.0" layoutY="289.0" onAction="#btnOnActionDelete" prefHeight="170.0" prefWidth="245.0" stylesheets="@../styles/form.css" text="Delete" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ImageView fitHeight="370.0" fitWidth="332.0" layoutX="346.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icons8-passenger-64%20(1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.ImageView?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="lk.ijse.controller.PassengerUpdateFormController"
+            prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #84bbe1;">
+    <children>
+        <JFXTextField fx:id="txtId" layoutX="302.0" layoutY="112.0" onAction="#txtOnActionSearch" prefHeight="50.0" prefWidth="200.0" promptText="Passenger ID" stylesheets="@../styles/dashboard.css" />
+        <JFXTextField fx:id="txtAge" layoutX="302.0" layoutY="238.0" prefHeight="50.0" prefWidth="200.0" promptText="Age" stylesheets="@../styles/dashboard.css" />
+        <JFXTextField fx:id="txtName" layoutX="603.0" layoutY="112.0" prefHeight="50.0" prefWidth="200.0" promptText="Name" stylesheets="@../styles/dashboard.css" />
+        <JFXTextField fx:id="txtGender" layoutX="603.0" layoutY="238.0" prefHeight="50.0" prefWidth="200.0" promptText="Gender" stylesheets="@../styles/dashboard.css" />
+        <JFXTextField fx:id="txtAddress" layoutX="302.0" layoutY="365.0" prefHeight="50.0" prefWidth="200.0" promptText="Address" stylesheets="@../styles/dashboard.css" />
+        <JFXTextField fx:id="txtContact" layoutX="603.0" layoutY="365.0" prefHeight="50.0" prefWidth="200.0" promptText="Contact" stylesheets="@../styles/dashboard.css" />
+        <ImageView fitHeight="303.0" fitWidth="291.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../icon/icons8-passenger-64%20(1).png" />
+            </image>
+        </ImageView>
+        <JFXButton buttonType="RAISED" layoutX="557.0" layoutY="481.0" onAction="#updatebtn" prefHeight="50.0" prefWidth="100.0" stylesheets="@../styles/dashboard.css" text="Update" />
+        <JFXButton buttonType="RAISED" layoutX="703.0" layoutY="481.0" onAction="#backbtn" prefHeight="50.0" prefWidth="100.0" stylesheets="@../styles/dashboard.css" text="Cancel" />
+        <Label layoutX="378.0" layoutY="31.0" prefHeight="40.0" prefWidth="148.0" text="Update Passenger">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Label>
+    </children>
+
+</AnchorPane>

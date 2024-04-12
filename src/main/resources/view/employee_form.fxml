@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.Label?>
+<AnchorPane fx:id="root" prefHeight="720.0" prefWidth="1024.0" style="-fx-background-color: #84bbe1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.EmployeeFormController">
+   <children>
+      <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" onAction="#btnOnActionBack" prefHeight="99.0" prefWidth="103.0" text="Back">
+         <graphic>
+            <ImageView fitHeight="61.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icons8-back-button.gif" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXTextField fx:id="txtId" layoutX="541.0" layoutY="135.0" onAction="#txtOnActionSearch" prefHeight="50.0" prefWidth="250.0" promptText="Employee ID" stylesheets="@../styles/dashboard.css" />
+      <JFXTextField fx:id="txtAge" layoutX="541.0" layoutY="261.0" prefHeight="50.0" prefWidth="250.0" promptText="Age" stylesheets="@../styles/dashboard.css" />
+      <JFXTextField fx:id="txtName" layoutX="956.0" layoutY="135.0" prefHeight="50.0" prefWidth="250.0" promptText="Name" stylesheets="@../styles/dashboard.css" />
+      <JFXTextField fx:id="txtGender" layoutX="956.0" layoutY="261.0" prefHeight="50.0" prefWidth="250.0" promptText="Gender" stylesheets="@../styles/dashboard.css" />
+      <JFXTextField fx:id="txtAddress" layoutX="541.0" layoutY="388.0" prefHeight="50.0" prefWidth="250.0" promptText="Address" stylesheets="@../styles/dashboard.css" />
+      <JFXTextField fx:id="txtContact" layoutX="956.0" layoutY="388.0" prefHeight="50.0" prefWidth="250.0" promptText="Contact" stylesheets="@../styles/dashboard.css" />
+      <TableView fx:id="tblEmployee" layoutY="524.0" onMouseClicked="#tblEmployeeOnMouseClicked" prefHeight="558.0" prefWidth="1620.0" style="-fx-background-color: #84bbe1;">
+         <columns>
+            <TableColumn fx:id="colID" prefWidth="242.99993896484375" text="Employee ID" />
+            <TableColumn fx:id="colName" minWidth="0.0" prefWidth="300.0" text="Name" />
+            <TableColumn fx:id="colAge" prefWidth="180.0" text="Age" />
+            <TableColumn fx:id="colGender" prefWidth="170.0" text="Gender" />
+            <TableColumn fx:id="colAddress" prefWidth="450.0" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="276.0" text="Contact" />
+         </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="1430.0" layoutY="132.0" onAction="#btnOnActionAdd" prefHeight="53.0" prefWidth="126.0" stylesheets="@../styles/dashboard.css" text="Add" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/new.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1430.0" layoutY="217.0" onAction="#btnOnActionUpdate" prefHeight="53.0" prefWidth="126.0" stylesheets="@../styles/dashboard.css" text=" Update" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/update.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1430.0" layoutY="302.0" onAction="#btnOnActionClear" prefHeight="53.0" prefWidth="126.0" stylesheets="@../styles/dashboard.css" text="Clear" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/clear.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1430.0" layoutY="387.0" onAction="#btnOnActionDelete" prefHeight="53.0" prefWidth="126.0" stylesheets="@../styles/dashboard.css" text="Delete" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ImageView fitHeight="370.0" fitWidth="332.0" layoutX="148.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icons8-identification-documents-64.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="741.0" layoutY="31.0" prefHeight="42.0" prefWidth="219.0" text="Employee Form" textFill="#5e5c5c">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
